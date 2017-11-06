@@ -1,6 +1,5 @@
-docker rm hello-world > /dev/null
+docker rm -f hello-world > /dev/null
 docker rmi localhost:5000/hello-world:latest > /dev/null
 
-docker image rm localhost:5000/hello-world:latest
 docker build -f Dockerfile -t localhost:5000/hello-world .
-docker run --name hello-world localhost:5000/hello-world:latest
+docker run -d --name hello-world -p 8080:8080 localhost:5000/hello-world:latest

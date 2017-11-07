@@ -1,1 +1,1 @@
-docker run -d -it --name demo ubuntu /usr/bin/top
+docker run -d -it --name demo localhost:5000/ubuntu /usr/bin/top
